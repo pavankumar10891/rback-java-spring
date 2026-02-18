@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "08e42305-503e-4988-8cff-33d5bd64b232",
+		"name": "Rback-Java-springboot-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6558204",
+		"_collection_link": "https://quickfilo-it-teem.postman.co/workspace/Personal-Workspace~3b725856-fc82-439c-bd65-645e68a3ac90/collection/6558204-08e42305-503e-4988-8cff-33d5bd64b232?action=share&source=collection_link&creator=6558204"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Haj\",\n  \"password\": \"123456\",\n  \"email\": \"haj@gmail.com\",\n  \"roles\": [\"FINALIZER\"]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Engineer\",\n  \"password\": \"123456\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Case",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFbmdpbmVlciIsImlhdCI6MTc3MTQwNzA4MSwiZXhwIjoxNzcxNDkzNDgxfQ.aT77Bl2hIw8yBzb4zhl6Pe2KDTomSr-fy-eViFXH_2s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/case/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"case",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
